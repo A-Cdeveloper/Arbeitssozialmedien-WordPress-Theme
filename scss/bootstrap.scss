@@ -1,0 +1,182 @@
+$primary: #007BD1;
+$secondary: #FCFCE8;
+
+
+
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+
+$colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange", "yellow", "green", "teal", "cyan", "gray");
+
+
+$spacer: 0.625rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+);
+
+// Grid
+
+$grid-columns: 30;
+$grid-gutter-width: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 480px,
+  lg: 600px,
+  xl: 768px,
+  xxl: 980px
+);
+
+$container-max-widths: (
+  xs: 90%,
+  sm: 94%,
+  md: 96%,
+  lg: 96%,
+  xl: 96%,
+  xxl: 980px
+);
+
+$position-values: (
+  0: 0,
+  1: 1%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Usage
+.container-fluid,
+.container {
+  @include make-container();
+}
+
+
+$body-color: #000000;
+
+// Fonts
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-size-base: .95rem; // 16px browser default
+$font-size-sm: 1rem;
+$font-size-lg: 1rem;
+$line-height-base: 1.2rem;
+
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+$font-weight-base: $font-weight-normal;
+
+$paragraph-margin-bottom: 1.3rem;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $primary;
+$link-hover-decoration: underline;
+
+$headings-font-family: Arial, Helvetica, sans-serif;
+$headings-margin-bottom: $spacer;
+$headings-font-weight: 700;
+$headings-line-height: 1;
+$headings-color: $primary;
+$h1-font-size: $font-size-base * .95;
+$h2-font-size: $font-size-base * .95;
+$h3-font-size: $font-size-base * .95;
+
+
+
+$display-font-sizes: (
+  1:$h1-font-size,
+  2:$h2-font-size,
+  3:$h3-font-size,
+  4:$font-size-base * 1 // 16px
+);
+$display-font-weight: 500;
+$display-line-height: $headings-line-height;
+
+
+
+// navigation //
+$nav-link-padding-y: 0;
+$nav-link-padding-x: 0;
+$nav-link-font-size: 1rem;
+$nav-link-font-weight: $headings-font-weight;
+$nav-link-color: $white;
+$nav-link-hover-color: $danger;
+
+$navbar-nav-link-padding-x: 1rem;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+
+
+$border-color: black;
+$border-radius: .25rem !default;
+
+
+
+
+
+
+
+
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "tables";
+//@import "bootstrap/scss/forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group";
+//@import "bootstrap/scss/close";
+//@import "bootstrap/scss/toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+@import "bootstrap/scss/offcanvas";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+
+
+
+//@import "bootstrap/scss/bootstrap";

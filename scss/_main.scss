@@ -1,0 +1,155 @@
+$primary: #007BD1;
+$secondary: #FCFCE8;
+
+body {
+
+	background: $secondary url("./images/bg.png") repeat-x 0 0 !important;
+
+}
+
+/*=============================================
+=            Header           =
+=============================================*/
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+	line-height: 1.2 !important;
+}
+
+h3 {
+	text-transform: none;
+}
+
+
+header {
+
+	& #logo img {
+		width: 100%;
+		height: auto;
+		max-width: 400px;
+
+
+		@media screen and (max-width: 600px) {
+			max-width: 350px;
+		}
+
+		@media screen and (max-width: 480px) {
+			max-width: 270px;
+		}
+
+	}
+}
+
+
+
+/*=============================================
+=            Menu           =
+=============================================*/
+.navbar-nav {
+	padding: 0 !important;
+
+	& .menu-item {
+
+		& a {
+			padding: 4px .6rem !important;
+			text-transform: uppercase;
+			font-size: .8rem;
+			font-weight: 900 !important;
+			color: $white;
+			letter-spacing: 0.05em !important;
+
+			&:hover {
+				color: $primary !important;
+				background: white;
+			}
+		}
+
+		&.current_page_item a {
+			color: $primary !important;
+			background: white;
+		}
+
+	}
+
+}
+
+#meta-menu {
+	display: flex;
+	gap: .4rem;
+	align-items: center;
+	font-size: .75rem;
+
+	& ul {
+		display: flex;
+		gap: .4rem;
+		align-items: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		& li {
+			margin: 0 !important;
+
+			& a {
+
+				&::after {
+					content: "|";
+					color: $primary;
+					margin-left: .5rem;
+				}
+
+			}
+
+			&:last-child {
+				& a {
+					&::after {
+						content: none;
+					}
+				}
+			}
+		}
+
+	}
+
+
+}
+
+
+/*
+.navbar-nav > .active > a { 
+    color: $danger!important; 
+}
+*/
+/*=============================================
+=            Content           =
+=============================================*/
+main {
+	& ul {
+		list-style: outside;
+		padding-left: 1rem;
+
+		& li {
+			margin-bottom: .5rem;
+
+			&::marker {
+				color: $primary !important;
+			}
+		}
+	}
+
+	& p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+/*=============================================
+=            Footer           =
+=============================================*/
+footer {
+	font-size: .75rem;
+	opacity: .5;
+}
